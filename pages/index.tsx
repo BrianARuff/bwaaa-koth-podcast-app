@@ -1,10 +1,9 @@
-import { Box, Flex, List, ListItem, Text } from "@chakra-ui/react";
+import { Flex, List, ListItem, Text } from "@chakra-ui/react";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import RegisterForm from "../components/RegisterForm";
 import UserList from "../components/UsersList";
-import styles from "../styles/Home.module.scss";
 
 export default function Home() {
   return (
@@ -34,8 +33,16 @@ export default function Home() {
           content="https://pbs.twimg.com/profile_banners/4008673220/1452974077/1500x500"
         />
       </Head>
-      <Flex as="nav" w="100%" className={styles.nav}>
-        <Box className="icon">
+      <Flex
+        bg={"#333"}
+        p={4}
+        color={"#fff"}
+        justifyContent={"space-between"}
+        alignItems={"center"}
+        as="nav"
+        w="100%"
+      >
+        <Flex w="100%" className="icon">
           <Link href="/">
             <Image
               src="/logo.png"
@@ -44,11 +51,27 @@ export default function Home() {
               height={50}
             />
           </Link>
-        </Box>
-        <List>
-          <ListItem>
-            <Link href="https://twitter.com/KOTH_Podcast" passHref>
+        </Flex>
+        <Flex w="100%">
+          <Text as="h1">BWAAA! King of the Hill Podcast</Text>
+        </Flex>
+        <List display="flex" justifyContent={"flex-end"} flexDir="row">
+          <ListItem mr={4}>
+            <Link
+              target={"_blank"}
+              href="https://twitter.com/KOTH_Podcast"
+              passHref
+            >
               Twitter
+            </Link>
+          </ListItem>
+          <ListItem mr={4}>
+            <Link
+              target={"_blank"}
+              href="https://www.instagram.com/bwaaakoth/"
+              passHref
+            >
+              Instagram
             </Link>
           </ListItem>
         </List>

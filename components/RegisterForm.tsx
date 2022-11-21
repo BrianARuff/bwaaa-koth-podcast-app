@@ -61,8 +61,8 @@ export default function RegisterForm() {
     <Flex
       as="form"
       w="100%"
-      maxW={["100%", "100%", "100%", "100%", "750px"]}
-      minW={["100%", "100%", "100%", "100%", "300px"]}
+      minW={"300px"}
+      maxW={"750px"}
       flexDir={"column"}
       onSubmit={handleSubmit(onSubmit)}
     >
